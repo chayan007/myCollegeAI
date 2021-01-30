@@ -22,3 +22,6 @@ def home(request):
     return render(request, 'pages/public/home.html', {
         'colleges': colleges
     })
+
+def about(request):
+    return render(request, "pages/public/about.html")

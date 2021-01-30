@@ -19,7 +19,6 @@ def home(request):
     colleges = College.objects.filter(
         is_top=True,
     )
-    print(colleges)
     return render(request, 'pages/public/home.html', {
         'colleges': colleges
     })

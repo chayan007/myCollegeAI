@@ -86,21 +86,22 @@
             <div class="card card-transparent">
               <div class="row" style="margin: 3px">
                 <div class="card-body">
-                  <div class="row">
-                    <div class="col-lg-4">
+                  <div class="row">                    
                       {% for college in colleges %}
+                       <div class="col-lg-4 col-sm-6">
                       <div class="card card-default">
                         <div class="card-header  separator">
-                          <div class="card-title">Portlet Three
+                          <div class="card-title">{{ college.get_college_type_display }}
                           </div>
                         </div>
                         <div class="card-body">
-                          <h3>
-                  <span class="semi-bold">With</span> Separator</h3>
-                          <h5>{{ college.abbreviated_name }}, {{ college.city }}</h5>
-                          <h6>{{ college.get_ownership_display }} | {{ college.state }}</h6>
-                          <p>When it comes to digital design, the lines between functionality, aesthetics, and psychology are inseparably blurred. Without the constraints of the physical world, there’s no natural form to fall back on, and every bit of constraint and affordance must be introduced intentionally. Good design makes a product useful. A product is bought to be used. </p>
-                      <a href="/college/{{ college.slug }}"><img alt="Quote" src="{{ college.image.url }}" height="350px" width="250px"></a>
+                          <h3 style="white-space: nowrap; display: inline-block; overflow: hidden; clear:both; text-overflow:ellipsis; max-width:100%;"><a href="#">
+                  <span class="semi-bold">{{ college.abbreviated_name }}</span></a></h3>
+                          <h5>{{ college.city }}, {{ college.state}}</h5>
+                          <h6>{{ college.get_ownership_display }} | {{ college.approval }}</h6>
+                          <div class="card_college-img" style="height: 200px; overflow:hidden;">
+                      <a href="/college/{{ college.slug }}"><img alt="Quote" src="{{ college.image.url }}" width="100%" height="100%"></a>
+                        </div>
                         </div>
                       </div>
                     </div>
@@ -121,8 +122,7 @@
                   <div class="p-r-30">
                     <h3>About Us</h3>
                     <br>
-                    <p>Somthing about us. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+<p>mycollegeai is an AI driven one stop solution for students, parents and education industry players who are seeking information on colleges. Our aim is to help students in choosing the right path for their ambitious career. mycollegeai - AI which helps to find your perfect college.</p>
                   </div>
                 </div>
             </div>

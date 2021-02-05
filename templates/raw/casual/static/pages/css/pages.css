@@ -15206,7 +15206,6 @@ Responsive Util
   background: url(https://storage.googleapis.com/kepler-marketing/community_login_cover_c.jpg);
   width: 100%;
   height: 100%;
-  overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -15219,7 +15218,6 @@ Responsive Util
 .login-wrapper .bg-pic {
   position: absolute;
   width: 100%;
-  overflow: hidden;
 }
 
 .login-wrapper .bg-pic > img {

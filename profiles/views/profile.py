@@ -16,7 +16,7 @@ class EditUserProfileView(View):
     form_class = ProfileForm
 
     def get(self, request, pk, format=None):
-        return render(request, 'pages/protected/dashboard.html', {})
+        return render(request, 'pages/auth/edit-profile.html', {}) 
 
     def post(self, request, pk, format=None):
         profile = request.user.profile
@@ -35,6 +35,7 @@ class UpdatePassword(View):
     form_class = ChangePasswordForm
 
     def get(self, request, pk, format=None):
+        return render(request, 'pages/auth/change-password.html', {}) 
 
 
     def post(self, request, pk, format=None):

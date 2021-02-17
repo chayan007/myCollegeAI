@@ -2,7 +2,11 @@
 
 {% block title %} Contact Us {% endblock %}
 
-{% block hero_title %} Contact Us {% endblock %}
+{% block hero_title %} <ul class="breadcrumb">
+  <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
+  <li class="link-01"> Contact Us</li>
+</ul>
+<h2> Contact Us </h2> {% endblock %}
 
 {% block content %}
 <section id="content">

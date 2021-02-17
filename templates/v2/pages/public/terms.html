@@ -2,7 +2,11 @@
 
 {% block title %} Terms and Conditions {% endblock %}
 
-{% block hero_title %} Terms and Conditions {% endblock %}
+{% block hero_title %} <ul class="breadcrumb">
+    <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
+    <li class="link-01"> Terms and Conditions</li>
+  </ul>
+  <h2> Terms and Conditions </h2> {% endblock %}
 
 {% block content %}
 <section id="content">

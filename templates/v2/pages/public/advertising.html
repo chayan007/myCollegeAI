@@ -2,7 +2,11 @@
 
 {% block title %} Advertising {% endblock %}
 
-{% block hero_title %} Advertising {% endblock %}
+{% block hero_title %} <ul class="breadcrumb">
+  <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
+  <li class="link-01"> Advertising </li>
+</ul>
+<h2> Advertising </h2> {% endblock %}
 
 {% block content %}
     <section id="content">

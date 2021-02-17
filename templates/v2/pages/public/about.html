@@ -2,7 +2,12 @@
 
 {% block title %} About Us {% endblock %}
 
-{% block hero_title %} About mycollegeai {% endblock %}
+{% block hero_title %}
+<ul class="breadcrumb">
+  <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
+  <li class="link-01"> About Us</li>
+</ul>
+<h2> About Us </h2>  {% endblock %}
 
 {% block content %}
     <section id="content">

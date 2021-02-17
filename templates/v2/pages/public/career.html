@@ -2,7 +2,11 @@
 
 {% block title %} Career {% endblock %}
 
-{% block hero_title %} Career {% endblock %}
+{% block hero_title %} <ul class="breadcrumb">
+  <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
+  <li class="link-01"> Career</li>
+</ul>
+<h2> Career </h2> {% endblock %}
 
 {% block content %}
     <section id="content">

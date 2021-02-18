@@ -25,7 +25,7 @@
     {% include 'v2/components/navbar.html' %}
     <section id="hero">
       <div class="container">
-        <h3>{% block hero_title %}{% endblock %}</h3>
+        {% block hero_title %}{% endblock %}
       </div>
     </section>
     {% block content %} {% endblock %}

@@ -6,7 +6,6 @@
     <li class="breadcrumb-item active">{{ college.full_name }}, {{ college.city }}</li>
 {% endblock %}
 {% block hero_title %}
-  <div class="container">
     <ul class="breadcrumb">
       <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
       <li class="link-01"> <a href="/college/list">Colleges</a></li>
@@ -34,7 +33,7 @@
           <path d="M11.9999 16.4945C12.1664 16.4945 12.3132 16.426 12.4258 16.3183C12.5335 16.2106 12.6021 16.0588 12.6021 15.8923V12.5974H15.8971C16.0635 12.5974 16.2104 12.5288 16.323 12.4211C16.4307 12.3134 16.4993 12.1616 16.4993 11.9952C16.4993 11.6622 16.23 11.3929 15.902 11.3978H12.607V8.10287C12.607 7.76994 12.3377 7.50066 12.0097 7.50556C11.6768 7.50556 11.4075 7.77484 11.4124 8.10287V11.3978H8.11739C7.78447 11.3978 7.51519 11.6671 7.52009 11.9952C7.52009 12.3281 7.78936 12.5974 8.11739 12.5925H11.4124V15.8874C11.3977 16.2253 11.667 16.4945 11.9999 16.4945Z"></path>
         </svg>Bookmark
       </button>
-      <button class="icon-button-outline">
+      <!-- <button class="icon-button-outline">
         <svg class="icon" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">
             <path d="M23.351 11.488C22.969 11.488 22.6634 11.7875 22.6634 12.1619V18.2914C22.6634 19.9586 21.278 21.3113 19.5819 21.3113H4.49528C2.79409 21.3113 1.41379 19.9536 1.41379 18.2914V12.062C1.41379 11.6877 1.10818 11.3882 0.72618 11.3882C0.344177 11.3882 0.0385742 11.6877 0.0385742 12.062V18.2914C0.0385742 20.7023 2.04027 22.659 4.49528 22.659H19.5819C22.042 22.659 24.0386 20.6974 24.0386 18.2914V12.1619C24.0386 11.7925 23.733 11.488 23.351 11.488Z"></path>
@@ -46,7 +45,7 @@
             </clipPath>
           </defs>
         </svg>Download Brochure
-      </button>
+      </button> -->
       <button class="icon-button-outline">
         <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">
@@ -60,7 +59,6 @@
         </svg>Apply Now
       </button>
     </div>
-  </div>
 {% endblock %}
 {% block content %}
     <section id = "individual-page-content">

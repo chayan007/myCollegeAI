@@ -43,3 +43,6 @@ def terms(request):
 
 def privacy(request):
     return render(request, 'v2/pages/public/privacy.html')
+
+def forget(request):
+    return render(request, 'v2/pages/auth/forget-password.html')

@@ -34,6 +34,7 @@ urlpatterns = [
   path('advertising', base_views.advertising, name='advertising'),
   path('terms', base_views.terms, name='terms'),
   path('privacy',  base_views.privacy, name='privacy'),
+  path('forget_password', base_views.forget, name='forget'),
 ]
 
 if settings.DEBUG:

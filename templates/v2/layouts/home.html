@@ -283,7 +283,7 @@
           <p>
             We ease your biggest doubts with our AI based technology in finding your dream college.
           </p>
-          <button class="button-primary">Get Started</button>
+          <button class="button-primary" id="psychoid">Get Started</button>
         </div>
         <div class="counselling-confirmation">
           <div class="counselling-confirmation-message">
@@ -307,6 +307,12 @@
     </section>
     {% block content %} {% endblock %}
   </div>
+ <div id="modalpsyid" class="modalpsy">
+   <div class = "modal-contentpsy">
+  <span class="close" id="psyclose">&times;</span>
+   <h1>Hey</h1> 
+ </div>
+ </div>
   <div class="subscribe">
     <div class="container">
       <div class="subscribe-content">
@@ -421,4 +427,5 @@
     </div>
   </footer>
   <script async src="{% static 'js/all.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
 </body>

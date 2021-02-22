@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect, render
 from django.views.generic.base import View
-
+from myCollegeAI import urls
 from profiles.models import Profile, User
 
 
@@ -26,8 +26,10 @@ class RegisterView(View):
 
     def post(self, request):
         try:
-            first_name = request.POST['first_name']
-            last_name = request.POST['last_name']
+            name = request.POST['name']
+            name = name.split(" ",1)
+            first_name = name[0]
+            last_name = name[-1]
             username = request.POST['username']
             password = request.POST['password']
             email = request.POST['email']

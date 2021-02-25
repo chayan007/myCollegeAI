@@ -73,7 +73,7 @@
               <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M23.52 12C23.52 5.63766 18.3623 0.47998 12 0.47998C5.63766 0.47998 0.47998 5.63766 0.47998 12C0.47998 17.7499 4.69266 22.5158 10.2 23.38V15.33H7.27498V12H10.2V9.46198C10.2 6.57478 11.9199 4.97998 14.5513 4.97998C15.8113 4.97998 17.13 5.20498 17.13 5.20498V8.03998H15.6774C14.2464 8.03998 13.8 8.92806 13.8 9.83998V12H16.995L16.4842 15.33H13.8V23.38C19.3073 22.5158 23.52 17.7499 23.52 12Z" fill="#1877F2"></path>
                 <path d="M16.4842 15.33L16.9949 12H13.7999V9.83998C13.7999 8.92896 14.2463 8.03998 15.6773 8.03998H17.1299V5.20498C17.1299 5.20498 15.8116 4.97998 14.5512 4.97998C11.9198 4.97998 10.1999 6.57478 10.1999 9.46198V12H7.2749V15.33H10.1999V23.38C11.3926 23.5666 12.6072 23.5666 13.7999 23.38V15.33H16.4842Z" fill="white"></path>
-              </svg>Continue with Facebook
+              </svg> <a href="{% url 'social:begin' 'facebook' %}">Continue with Facebook</a> 
             </button>
           </div>
         </div>
@@ -146,7 +146,7 @@
               <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M23.52 12C23.52 5.63766 18.3623 0.47998 12 0.47998C5.63766 0.47998 0.47998 5.63766 0.47998 12C0.47998 17.7499 4.69266 22.5158 10.2 23.38V15.33H7.27498V12H10.2V9.46198C10.2 6.57478 11.9199 4.97998 14.5513 4.97998C15.8113 4.97998 17.13 5.20498 17.13 5.20498V8.03998H15.6774C14.2464 8.03998 13.8 8.92806 13.8 9.83998V12H16.995L16.4842 15.33H13.8V23.38C19.3073 22.5158 23.52 17.7499 23.52 12Z" fill="#1877F2"></path>
                 <path d="M16.4842 15.33L16.9949 12H13.7999V9.83998C13.7999 8.92896 14.2463 8.03998 15.6773 8.03998H17.1299V5.20498C17.1299 5.20498 15.8116 4.97998 14.5512 4.97998C11.9198 4.97998 10.1999 6.57478 10.1999 9.46198V12H7.2749V15.33H10.1999V23.38C11.3926 23.5666 12.6072 23.5666 13.7999 23.38V15.33H16.4842Z" fill="white"></path>
-              </svg>Continue with Facebook
+              </svg> <a href="{% url 'social:begin' 'facebook' %}"> Continue with Facebook</a>
             </button>
           </div>
         </div>
@@ -226,24 +226,24 @@
               <li class="link-items"><a class="label-02" href="#">Consult</a></li>
               <li class="link-items"><a class="label-02" href="#">Compare</a></li>
             </ul>
-          {% if user.is_authenticated %}
-          <div class="nav-content-links__user"><img class="user-avatar" src="https://ui-avatars.com/api/?format=svg&amp;name=Drady+jules" alt=""><span class="label-02">Drady</span>
-            <div class="chevron-button">
-              <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.9995 16.8175L2.74133 7.37419C2.51364 7.14195 2.14847 7.14195 1.92077 7.37419C1.69308 7.60644 1.69308 7.97892 1.92077 8.21117L11.5914 18.0752C11.8191 18.3075 12.1843 18.3075 12.412 18.0752L22.0783 8.21117C22.19 8.09723 22.2501 7.94386 22.2501 7.79487C22.2501 7.64588 22.1943 7.49251 22.0783 7.37858C21.8506 7.14633 21.4854 7.14633 21.2577 7.37858L11.9995 16.8175Z"></path>
-              </svg>
+            {% if user.is_authenticated %}
+            <div class="nav-content-links__user"><img class="user-avatar" src="https://ui-avatars.com/api/?format=svg&amp;name=Drady+jules" alt=""><span class="label-02">Drady</span>
+              <div class="chevron-button">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.9995 16.8175L2.74133 7.37419C2.51364 7.14195 2.14847 7.14195 1.92077 7.37419C1.69308 7.60644 1.69308 7.97892 1.92077 8.21117L11.5914 18.0752C11.8191 18.3075 12.1843 18.3075 12.412 18.0752L22.0783 8.21117C22.19 8.09723 22.2501 7.94386 22.2501 7.79487C22.2501 7.64588 22.1943 7.49251 22.0783 7.37858C21.8506 7.14633 21.4854 7.14633 21.2577 7.37858L11.9995 16.8175Z"></path>
+                </svg>
+              </div>
+              <div class="user-dropdown">
+                <li><a class="label-02" href="#">Dashboard</a></li>
+                <li><a class="link-primary label-02" href="#LogOut">Log Out</a></li>
+              </div>
             </div>
-            <div class="user-dropdown">
-              <li><a class="label-02" href="#">Dashboard</a></li>
-              <li><a class="link-primary label-02" href="#LogOut">Log Out</a></li>
+            {% else %}
+            <div class="nav-content-links__right-buttons">
+              <button class="button-outline" id="logInButton">Log In</button>
+              <button class="button-primary" id="signUpButton">Sign Up for Free</button>
             </div>
-          </div>
-          {% else %}
-          <div class="nav-content-links__right-buttons">
-            <button class="button-outline" id="logInButton">Log In</button>
-            <button class="button-primary" id="signUpButton">Sign Up for Free</button>
-          </div>
-          {% endif %}
+            {% endif %}
           </div>
           <div class="hamburger-menu">
             <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

@@ -12,6 +12,7 @@
         <p class="link-01">Don't Have an Account?<a class="link-primary" href="#signup" id="signUpButton">Sign Up</a></p>
       </div>
       <form class="form-signup" data-validate action="{% url 'login' %}"  method="POST">
+        {% csrf_token %}
         <div class="form-element">
           <label for="email">Email</label>
           <input type="email" autocomplete="username" name="username" placeholder="Type your Email" required>
@@ -71,13 +72,14 @@
   <div class="modal-left">
     <div class="container">
       <div class="modal-left-header">
-        <h4 class="sub-header-01">Welcome to Examkhojo</h4>
+        <h4 class="sub-header-01">Welcome to MyCollegeAi</h4>
         <h6 class="sub-header-03">Sign Up</h6>
       </div>
       <div class="mobile_modal-switcher">
         <p class="link-01">Already Have an Account?<a class="link-primary" href="#signup" id="logInButton">Log In</a></p>
       </div>
       <form class="form-signup" action="{% url 'register' %}" method="POST" data-validate>
+        {% csrf_token %}
         <div class="form-element">
           <label for="name">Name</label>
           <input type="text" name="name" placeholder="Type your Name" required>

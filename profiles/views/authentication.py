@@ -1,9 +1,11 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect, render
 from django.views.generic.base import View
-from myCollegeAI import urls
+from django.core.mail import send_mail
+from django.core.mail import EmailMessage
+from django.conf import settings
 from profiles.models import Profile, User
-
+from base import generic_mailer
 
 class LoginView(View):
 
@@ -46,6 +48,16 @@ class RegisterView(View):
         if not user:
             return render(request, 'v2/pages/public/home.html', {'error': 'Username/Password is incorrect.'})
         login(request, user)
+        context = {
+            'template_name' : 'welcome_mail.html',
+            'recipients' : email,
+            'username':username,
+            'first_name':first_name,
+        }
+        try:
+            generic_mailer(context)
+        except:
+            pass
         return redirect('profile:dashboard')
 
     def get(self, request):
@@ -61,3 +73,5 @@ class LogoutView(View):
 
 class ResetPasswordView(View):
     pass
+
+

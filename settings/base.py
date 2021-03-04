@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     'social_django',
     'celery',
+    'crispy_forms',
+    'templated_email',
 
     'base',
     'college',
@@ -63,13 +65,14 @@ MIDDLEWARE = [
 ]
 
 AUTHENTICATION_BACKENDS = (
-    # 'social.backends.google.GoogleOAuth2',
+    'social_core.backends.google.GoogleOAuth',
     'social_core.backends.facebook.FacebookOAuth2',
 
     'django.contrib.auth.backends.ModelBackend',
 )
 
-#LOGIN AND LOGOUT ROUTES FOR SOCIAL LOGIN
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_URL = 'logout'
@@ -179,4 +182,12 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = os.getenv('EMAIL_USER')
+EMAIL_HOST_PASSWORD = ''
+SMTP_EMAIL = 'udit@gmail.com'
+TEMPLATED_EMAIL_TEMPLATE_DIR = 'templates/email/layout' #Use '' for top level template dir
+TEMPLATED_EMAIL_FILE_EXTENSION = 'html'
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
+
+SOCIAL_AUTH_FACEBOOK_KEY = 'YOUR_APP_KRY'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'YOUR_APP_SECRET'
+

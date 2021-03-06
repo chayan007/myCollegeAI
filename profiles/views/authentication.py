@@ -28,6 +28,7 @@ class RegisterView(View):
 
     def post(self, request):
         try:
+            import ipdb; ipdb.set_trace()
             name = request.POST['name']
             name = name.split(" ",1)
             first_name = name[0]
@@ -43,21 +44,21 @@ class RegisterView(View):
         user_obj.first_name = first_name
         user_obj.last_name = last_name
         user_obj.save()
-        Profile.objects.create(user=user_obj)
+        # Profile.objects.create(user=user_obj)
         user = authenticate(username=username, password=password)
         if not user:
             return render(request, 'v2/pages/public/home.html', {'error': 'Username/Password is incorrect.'})
         login(request, user)
-        context = {
-            'template_name' : 'welcome_mail.html',
-            'recipients' : email,
-            'username':username,
-            'first_name':first_name,
-        }
-        try:
-            generic_mailer(context)
-        except:
-            pass
+        # context = {
+        #     'template_name' : 'welcome_mail.html',
+        #     'recipients' : email,
+        #     'username':username,
+        #     'first_name':first_name,
+        # }
+        # try:
+        #     generic_mailer(context)
+        # except:
+        #     pass
         return redirect('profile:dashboard')
 
     def get(self, request):
